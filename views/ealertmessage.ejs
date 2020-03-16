@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>eAlert System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <img id="logo" src="PAL_BlueTexture.png">
+    <h1 id="message">eAlert System</h1>
+    <div class="adj-form-container">
+        <form id="ealert-form" method="POST" action="/ealertmessage">
+            <label id="ealert-message">eAlert Message</label>
+            <textarea id="ealert-textarea" rows="5" cols="50" name="message" placeholder="Place text message to be sent here."></textarea>
+            <label>PIN</label>
+            <input id="pin-input" name="pin" type="text">
+            <label>Groups (select all that apply)</label>
+            <div class="ealert-row">
+              <input class="ealert-checkbox" type="checkbox" name="production">Production
+              <input class="ealert-checkbox" type="checkbox" name="office">Office
+              <input class="ealert-checkbox" type="checkbox" name="reditus">Reditus
+              <input class="ealert-checkbox" type="checkbox" name="test">Test Group
+            </div>
+            <input class="bin-search-button" type="submit" value="Submit">
+        </form>
+    </div>
+  </body>
+</html>
